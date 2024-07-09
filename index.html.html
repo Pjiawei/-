@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>隨機問卷分配</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="redirectToRandomSurvey()">開始問卷</button>
+
+    <script>
+        function redirectToRandomSurvey() {
+            const surveys = [
+                'https://forms.gle/Q8PdptnAFKmoTTvv5',
+                'https://forms.gle/PsMu8X5qY3A4xjgy7',
+                'https://forms.gle/RPqLC4qG4LoWD6b66',
+                'https://forms.gle/cZEnMYyrU57sFgEv7'
+            ];
+            
+            const randomSurvey = surveys[Math.floor(Math.random() * surveys.length)];
+            window.location.href = randomSurvey;
+        }
+    </script>
+</body>
+</html>
